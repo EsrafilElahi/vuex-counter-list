@@ -1,13 +1,25 @@
 <template>
   <div class="container">
-    <span>hi</span>
+    <span>{{ this.$store.state.count }}</span>
+    <button @click="handleInc">inc</button>
+    <button @click="handleDec">dec</button>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+
+  methods: {
+    handleInc() {
+      this.$store.commit('increment')
+    },
+
+    handleDec() {
+      this.$store.commit('decrement')
+    }
+  }
 }
 </script>
 
@@ -30,5 +42,10 @@ html body #app {
   width: 100%;
   height: 100vh;
   padding: 5rem 0;
+}
+
+button {
+  width: 5rem;
+  margin: 1rem;
 }
 </style>
