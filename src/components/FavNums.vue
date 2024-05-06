@@ -10,7 +10,7 @@
 
     </div>
 
-    <input v-model="inputVal" required />
+    <input v-model="inputVal" required /> 
 
     <button @click="handleAddFavNums">add</button>
 
