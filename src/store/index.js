@@ -4,8 +4,9 @@ export const store = createStore({
   state() {
     return {
       count: 0,
+      favNums: [],
     };
-  }, 
+  },
   mutations: {
     increment(state) {
       state.count++;
@@ -13,6 +14,14 @@ export const store = createStore({
 
     decrement(state) {
       state.count--;
+    },
+
+    setFavNums(state, n) {
+      state.favNums.push(n);
+    },
+
+    clearFavNums(state) {
+      state.favNums = [];
     },
   },
 });

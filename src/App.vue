@@ -1,15 +1,18 @@
 <template>
   <div class="container">
     <CounterSection />
+    <hr />
+    <FavNums />
   </div>
 </template>
 
 <script>
 import CounterSection from './components/CounterSection.vue';
+import FavNums from './components/FavNums.vue';
 
 export default {
   name: 'App',
-  components: { CounterSection }
+  components: { CounterSection, FavNums }
 
 }
 </script>
@@ -19,6 +22,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+hr {
+  margin: 2rem 0;
 }
 
 html body #app {

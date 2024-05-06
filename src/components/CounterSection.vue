@@ -1,6 +1,8 @@
 <template>
   <div class="counter-div">
-    <span>{{ this.$store.state.count }}</span>
+    <span>{{ countState }}</span>
+    <!-- <span>{{ this.$store.state.count }}</span> -->
+
     <div class="btn-div">
       <button @click="handleInc">inc</button>
       <button @click="handleDec">dec</button>
@@ -19,6 +21,12 @@ export default {
 
     handleDec() {
       this.$store.commit('decrement')
+    }
+  },
+
+  computed: {
+    countState() {
+      return this.$store.state.count
     }
   }
 
